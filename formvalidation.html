@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script>
+            function validateForm(){
+                const x=document.forms["myForm"];
+                for (let i = 0; i < x.length; i++) {
+                    let text="";
+                 text += x.elements[i].value ;
+                 if(text===""){
+                    alert(`please  must be filled out`);
+                    return false;
+                 }
+                }
+
+            }
+        </script>
+    </head>
+    <body>
+        <form name="myForm" action="/index.html" onsubmit="return validateForm()">
+           <label id="userName" for="username" name="username">UserName</label> <input type="text" name="userName" ><br>
+           <label id="password" for="password" name="password">Password<input type="text" name="password" >
+            <input type="submit" value="submit">
+
+        </form>
+    </body>
+</html>
